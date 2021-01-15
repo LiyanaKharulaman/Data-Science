@@ -14,7 +14,7 @@ results_region = df.groupby("region").sum()
 display(df.groupby("type")["Sales"].mean().to_frame())
 
 5. To analyze the effect of fluctuating average price of an item to the sales recorded in every month for a given year.
-![Sales](/image/sales.png)
+![pict](/image/sales.png)
 
 6. To find which size of items sold the most.
 
