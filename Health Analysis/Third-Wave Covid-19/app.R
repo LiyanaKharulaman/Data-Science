@@ -50,7 +50,7 @@ ui <- fluidPage(theme = shinytheme("united"),
                                   sidebarPanel(h3("Did You Know?"), h5("Malaysia's third wave COVID-19 is  believed to be occured from September 26, 2020.
                                          Therefore, this Shiny Apps is developed to provide information to the public about the 3rd Wave COVID-19 in Malaysia"),
                                                img(src="dg_hisyam.png", height=250, width = 380, align="center"),
-                                               img(src="paper2.png", height=200, width = 380, align="center")
+                                               img(src="paper2.png", height=250, width = 380, align="center")
 
                                   ),
                                   sidebarPanel(h3("What You Need To Know?"), img(src="logo.png", height=120, width = 380),
@@ -75,13 +75,50 @@ ui <- fluidPage(theme = shinytheme("united"),
                                                     cause of an outbreak respiratory illness (SARS-CoV-2). It was emerged in Wuhan, China and currently has spread out all over the world.
                                                     Genomic findings revealed that SARS-CoV-2 is  associated with extreme acute respiratory syndrome-like bat viruses, rendering the
                                                     possibilities of bats as the primary reservoir. The medium of transmission to human is not well known, but the rapid transfer of humans to human
-                                                    beings has been widely confirmed."),
+                                                    beings has been widely confirmed.")
                                   ),
                                   sidebarPanel(img(src="prevention.png", height=440, width = 380),
                                                img(src="wabak1.png", height=140, width = 380))
 
                            ), # Navbar 1, tabPanel
-########################## page 2 - symptom checker part ##########################
+########################## page 2 - About ##########################                       
+                         
+                         tabPanel("About",
+                                  sidebarPanel(h3("Developers"),
+                                               h4("1. Mohammad Daniel bin Yusoff"),
+                                               h5("Contributions: Data acquisition, Interstate filtering and Malaysia’s map visualization."),
+                                               h4("2. Liyana Nabilah binti Kharulaman"),
+                                               h5("Contributions: Data acquisition, Interstate filtering and Malaysia’s map visualization"),
+                                               h4("3. Muhamad Azim Bin Mohamad Kamal"),
+                                               h5("Contributions: Data acquisition and Data visualization."),
+                                               h4("4. Mohamad Faisallah Bin Zaki"),
+                                               h5("Contributions: Data acquisition and Covid-19 infection prediction."),
+                                               
+                                               h3("Project Experiences"),
+                                               h4("1. We have successfully deploy shinyapps.io without any prior experience."),
+                                               h4("2. We have chosen data on Third-Wave Covid-19 in order to raise awareness."),
+                                               h4("3. We are able to create a map and visualize the data to aid understanding."),
+                                               h4("4. We are able to implement data science process onto our project in order to answer the questions stated."),
+                                                    
+                                  ),
+                                  
+                                  mainPanel(h3("User Guidelines"), img(src="flow.png", height=250, width = 800, align="center"),
+                                            h4("1. COVID-19 Information:"),
+                                            h5("Introduction about COVID-19 in Malaysia."),
+                                            h4("2. Symptom checker:"),
+                                            h5("User can check the symptom on what they feel."),
+                                            h4("3. Malaysia's Map - Facilities for Screening & Treatment:"),
+                                            h5("User can track healthcare facilities nearby and the details of the location will be displayed."),
+                                            h4("4. Active cases - Interstate:"),
+                                            h5("User can explore the active cases by state and district using the search box"),
+                                            h4("5. Visualisation:"),
+                                            h5("User can visualise data for Interstates and Interdistrict Active Cases comparison")             
+                                  ),
+                                  ),
+                                  
+                              
+                         
+########################## page 3 - symptom checker part ##########################
                            tabPanel("Symptom Checker", 
                               sidebarPanel(
                              textInput("txt1", "Given Name:", ""),
@@ -125,14 +162,14 @@ ui <- fluidPage(theme = shinytheme("united"),
                            ),
                            sidebarPanel(
                              h1('What you should do if you have symptoms ?'),
-                             img(src="a.jpg", height=450, width = 400))
+                             img(src="a.jpg", height=450, width = 380))
                            ),
 
 ########################## page 3 - Map-Hospital treat COVID-19 ##########################
                           tabPanel("Map - Facilities for Screening & Treatment",
                                    h1("List of Designated COVID-19 Screening & Treatment Centre in Malaysia"),h4("COVID-19 Alert!"),
                                    h5("Stay at home if you feel unwell. If you have a fever, cough and difficulty in breathing, seek medical attention and please call in advance!"),
-                                   sidebarPanel(h2("Standard Operating Procedure"), h5("To be continue"),
+                                   sidebarPanel(h2("Standard Operating Procedure"),
                                                 
                                                 h4("Check if you are a close contact!"),
                                                 h5("--> Health care associated exposure without appropriate PPE
@@ -142,7 +179,8 @@ ui <- fluidPage(theme = shinytheme("united"),
                                                 h5("--> Traveling together with COVID-19 patient in any kind of conveyance."),
                                                 h5("--> Living in the same household as a COVID-19 patient.")),
                                               
-                          mainPanel(leafletOutput("mymap", width = "100%", heigh=700))
+                          mainPanel( h4("Select your nearby Health Facilities to see the information"),
+                            leafletOutput("mymap", width = "100%", heigh=700))
                             ),
 
 ########################## page 4 - Active Cases ##########################
