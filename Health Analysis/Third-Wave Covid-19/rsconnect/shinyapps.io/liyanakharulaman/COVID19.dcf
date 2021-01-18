@@ -1,0 +1,12 @@
+name: COVID19
+title:
+username:
+account: liyanakharulaman
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3454411
+bundleId: 4113295
+url: https://liyanakharulaman.shinyapps.io/COVID19/
+when: 1610993912.97104
+asMultiple: FALSE
+asStatic: FALSE
