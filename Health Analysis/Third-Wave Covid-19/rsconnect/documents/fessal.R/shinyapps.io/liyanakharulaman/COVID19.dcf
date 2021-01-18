@@ -5,8 +5,8 @@ account: liyanakharulaman
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 3454411
-bundleId: 4113129
+bundleId: 4113221
 url: https://liyanakharulaman.shinyapps.io/COVID19/
-when: 1610990869.01419
+when: 1610992443.5195
 asMultiple: FALSE
 asStatic: FALSE
